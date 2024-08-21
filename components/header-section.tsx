@@ -24,7 +24,7 @@ export default function HeaderSection() {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 50, // Adjust offset for sticky navbar
+        top: section.offsetTop - 65, // Adjust offset for sticky navbar
         behavior: "smooth",
       });
     }
