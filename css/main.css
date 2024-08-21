@@ -1,0 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  padding-top: 65px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
