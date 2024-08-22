@@ -1,33 +1,13 @@
 "use client";
 
 import HeaderSection from "@/components/header-section";
-import Image from "next/image";
-import meetings from "../public/images/meeting.jpg";
+import BannerSection from "@/components/banner-section";
 
 export default function Home() {
   return (
     <>
       <HeaderSection />
-      {/* <div
-        style={{
-          width: "100%",
-          height: "300px",
-          overflow: "hidden",
-          background: "red",
-        }}
-      >
-        <Image
-          src={meetings}
-          alt="Logo"
-          layout="fill"
-          style={{
-            maxWidth: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
-      </div> */}
-
+      <BannerSection />
       <section id="section1" style={{ height: "100vh" }}>
         <h1>Who We Are</h1>
       </section>
