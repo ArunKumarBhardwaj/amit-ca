@@ -1,0 +1,55 @@
+/* components/WhoWeAre.module.css */
+.whoWeAre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.headingContainer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.textContainer {
+  flex: 1;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  /* max-width: 1200px; */
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.image {
+  border-radius: 8px;
+}

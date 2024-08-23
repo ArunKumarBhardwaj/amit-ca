@@ -12,6 +12,8 @@ export default function BannerSection({}: Props) {
           src={meetings}
           alt="Logo"
           style={{
+            filter: "blur(4px)",
+            // opacity: 0.3,
             maxWidth: "100%",
             height: "100%",
             objectFit: "cover",

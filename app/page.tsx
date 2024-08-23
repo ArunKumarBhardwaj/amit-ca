@@ -2,15 +2,17 @@
 
 import HeaderSection from "@/components/header-section";
 import BannerSection from "@/components/banner-section";
+import WhoWeAre from "@/components/who-we-are-section";
 
 export default function Home() {
   return (
     <>
       <HeaderSection />
       <BannerSection />
-      <section id="section1" style={{ height: "100vh" }}>
+      <WhoWeAre />
+      {/* <section id="section1" style={{ height: "100vh" }}>
         <h1>Who We Are</h1>
-      </section>
+      </section> */}
       <section id="section2" style={{ height: "100vh" }}>
         <h1>Services</h1>
       </section>
