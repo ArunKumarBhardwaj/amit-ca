@@ -5,16 +5,16 @@ import meetings from "../public/images/meeting.jpg";
 
 const WhoWeAre = () => {
   return (
-    <section className={styles.whoWeAre}>
+    <section className={styles.whoWeAre} id="section1">
       <div className={styles.headingContainer}>
         <h2 className={styles.title}>Who We Are</h2>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
-          <h3 className={styles.subtitle}>
-            JAKHWAL ADVISORS, a Chartered Accountancy firm was formed in the
-            year 2021.
-          </h3>
+          <p className={styles.subtitle}>
+            <b>JAKHWAL ADVISORS</b>, a Chartered Accountancy firm was formed in
+            the year 2022.
+          </p>
           <p className={styles.paragraph}>
             We have assisted clients in establishing new business ventures, and
             guided them on various initial compliances and entity formation
@@ -38,7 +38,7 @@ const WhoWeAre = () => {
             src={meetings} // Replace with the actual image path
             alt="Profile of the CA"
             width={400}
-            height={300}
+            height={360}
             className={styles.image}
           />
         </div>
