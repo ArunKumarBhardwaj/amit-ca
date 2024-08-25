@@ -1,4 +1,3 @@
-// components/WhoWeAre.js
 import Image from "next/image";
 import styles from "../css/WhoWeAre.module.css";
 import meetings from "../public/images/meeting.jpg";
@@ -35,7 +34,7 @@ const WhoWeAre = () => {
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src={meetings} // Replace with the actual image path
+            src={meetings}
             alt="Profile of the CA"
             width={400}
             height={360}

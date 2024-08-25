@@ -1,120 +1,159 @@
-/* components/ContactUs.module.css */
 .contactContainer {
-  width: 100%;
-  background-color: #1e1e1e;
-  padding: 60px 0;
+  background-color: #f8f9fa;
+  padding: 3rem 2rem;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
 
 .contentWrapper {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .title {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 40px;
   font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contactInfo {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .infoColumn {
   flex: 1;
-  max-width: 400px;
+  min-width: 300px;
 }
 
 .mapColumn {
-  flex: 1;
-  margin-left: 40px;
-  height: 400px; /* Set a fixed height */
-  overflow: hidden; /* Ensure no overflow */
-}
-
-.mapPlaceholder {
-  background-color: #fff;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  color: #6c757d;
+  flex: 1.2;
+  min-width: 350px;
 }
 
 .infoGroup {
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .infoGroup h2 {
-  color: #fff;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
 
 .infoGroup p {
-  color: #a79e9e;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #666;
+  margin: 0.25rem 0;
 }
 
 .infoGroup a {
-  color: #a79e9e;
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .infoGroup a:hover {
-  color: #007bff;
+  color: #0056b3;
+}
+
+.mapColumn {
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .socialLinks {
+  margin-top: 2rem;
   text-align: center;
 }
 
 .socialLinks h3 {
-  color: #fff;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .socialIcons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 1rem;
 }
 
-.socialIcon {
-  display: inline-flex;
+.socialIcons a {
+  background-color: #000;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.socialIcon:hover {
-  background-color: #0056b3;
+.socialIcons a:hover {
+  background-color: #000;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+  .contactContainer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
   .contactInfo {
     flex-direction: column;
   }
 
+  .infoColumn,
   .mapColumn {
-    margin-left: 0;
-    margin-top: 30px;
+    width: 100%;
   }
 
-  .infoColumn {
-    max-width: 100%;
+  .mapColumn {
+    height: 250px;
+    min-width: unset;
+  }
+
+  .socialIcons a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .infoGroup h2 {
+    font-size: 1.1rem;
+  }
+
+  .infoGroup p,
+  .infoGroup a {
+    font-size: 0.9rem;
+  }
+
+  .socialLinks h3 {
+    font-size: 1.3rem;
+  }
+
+  .socialIcons a {
+    width: 35px;
+    height: 35px;
   }
 }

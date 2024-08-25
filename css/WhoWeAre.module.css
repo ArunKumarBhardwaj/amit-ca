@@ -1,53 +1,105 @@
-/* components/WhoWeAre.module.css */
 .whoWeAre {
+  background-color: #f8f9fa;
+  padding: 5rem 1rem; /* Reduced side padding */
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1e1e1e;
-  color: #fff;
-  padding: 40px;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .headingContainer {
+  width: 100%;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.textContainer {
-  flex: 1;
-  margin-right: 100px;
-  text-align: left;
+  margin-bottom: 3rem;
 }
 
 .title {
-  font-size: 48px;
-}
-
-.subtitle {
-  font-size: 20px;
-  margin-top: 2rem;
-}
-
-.paragraph {
-  margin-top: 1.5rem;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .contentContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
+  gap: 3rem;
+  width: 95%; /* Use 95% of the available width */
+  margin: 0 auto;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .imageContainer {
-  flex-shrink: 0;
-  margin-left: 20px;
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  /* height: auto; */
+}
+
+@media (max-width: 1024px) {
+  .whoWeAre {
+    padding: 4rem 1rem; /* Reduced side padding */
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoWeAre {
+    padding: 3rem 1rem; /* Reduced side padding */
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whoWeAre {
+    padding: 2.5rem 0.5rem; /* Further reduced side padding for very small screens */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
 }

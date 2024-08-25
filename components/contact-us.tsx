@@ -1,6 +1,11 @@
 import dynamic from "next/dynamic";
 import styles from "../css/ContactUs.module.css";
-import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
 
 const Map = dynamic(() => import("../components/map/map"), {
   loading: () => <p>Loading map...</p>,
@@ -15,13 +20,13 @@ const ContactUs = () => {
         <div className={styles.contactInfo}>
           <div className={styles.infoColumn}>
             <div className={styles.infoGroup}>
-              <h2>Address</h2>
+              <h2>Office Address</h2>
               <p>210, Neelkanth Complex,</p>
               <p>Rajpur Road,</p>
               <p>Dehradun-248001</p>
             </div>
             <div className={styles.infoGroup}>
-              <h2>Email</h2>
+              <h2>General Enquires</h2>
               <p>
                 <a href="mailto:info@yourcompany.com">
                   caamitjakhwalddn@gmail.com
@@ -42,19 +47,19 @@ const ContactUs = () => {
         <div className={styles.socialLinks}>
           <h3>Follow Us</h3>
           <div className={styles.socialIcons}>
-            <a
+            {/* <a
               href="https://www.facebook.com/your-profile"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook size={30} color="#fff" />
-            </a>
+            </a> */}
             <a
-              href="https://twitter.com/your-profile"
+              href="https://wa.me/+918800675113"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter size={30} color="#fff" />
+              <FaWhatsapp size={30} color="#fff" />
             </a>
             <a
               href="https://www.instagram.com/jakhwal/"
