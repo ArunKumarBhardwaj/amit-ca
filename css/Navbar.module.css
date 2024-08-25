@@ -65,8 +65,7 @@
 }
 
 .navLinks li.active a {
-  color: #ff6347; /* Highlight color */
-  /* font-weight: bold; Or any other highlight effect */
+  color: #ff6347;
 }
 
 .navLinks a:hover {

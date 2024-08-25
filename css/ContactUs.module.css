@@ -1,0 +1,120 @@
+/* components/ContactUs.module.css */
+.contactContainer {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 60px 0;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.infoColumn {
+  flex: 1;
+  max-width: 400px;
+}
+
+.mapColumn {
+  flex: 1;
+  margin-left: 40px;
+  height: 400px; /* Set a fixed height */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.mapPlaceholder {
+  background-color: #fff;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #6c757d;
+}
+
+.infoGroup {
+  margin-bottom: 30px;
+}
+
+.infoGroup h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.infoGroup p {
+  color: #a79e9e;
+  line-height: 1.6;
+}
+
+.infoGroup a {
+  color: #a79e9e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoGroup a:hover {
+  color: #007bff;
+}
+
+.socialLinks {
+  text-align: center;
+}
+
+.socialLinks h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contactInfo {
+    flex-direction: column;
+  }
+
+  .mapColumn {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .infoColumn {
+    max-width: 100%;
+  }
+}

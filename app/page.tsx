@@ -3,6 +3,7 @@
 import HeaderSection from "@/components/header-section";
 import BannerSection from "@/components/banner-section";
 import WhoWeAre from "@/components/who-we-are-section";
+import ContactUs from "@/components/contact-us";
 
 export default function Home() {
   return (
@@ -10,9 +11,6 @@ export default function Home() {
       <HeaderSection />
       <BannerSection />
       <WhoWeAre />
-      {/* <section id="section1" style={{ height: "100vh" }}>
-        <h1>Who We Are</h1>
-      </section> */}
       <section id="section2" style={{ height: "100vh" }}>
         <h1>Services</h1>
       </section>
@@ -22,9 +20,10 @@ export default function Home() {
       <section id="section4" style={{ height: "100vh" }}>
         <h1>Testimonial</h1>
       </section>
-      <section id="section5" style={{ height: "100vh" }}>
+      <ContactUs />
+      {/* <section id="section5" style={{ height: "100vh" }}>
         <h1>Contact Section</h1>
-      </section>
+      </section> */}
     </>
   );
 }
