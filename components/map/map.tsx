@@ -4,7 +4,7 @@ const Map = () => {
   return (
     <iframe
       width="100%"
-      height="300"
+      height="380"
       style={{ border: 0 }}
       allow="fullscreen"
       aria-hidden="false"

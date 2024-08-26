@@ -59,21 +59,21 @@ const ContactUs = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp size={30} color="#fff" />
+              <FaWhatsapp size={25} color="#fff" />
             </a>
             <a
               href="https://www.instagram.com/jakhwal/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram size={30} color="#fff" />
+              <FaInstagram size={25} color="#fff" />
             </a>
             <a
               href="https://www.linkedin.com/company/jakhwaladvisors/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={30} color="#fff" />
+              <FaLinkedin size={25} color="#fff" />
             </a>
           </div>
         </div>

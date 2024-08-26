@@ -1,6 +1,6 @@
 .contactContainer {
   background-color: #f8f9fa;
-  padding: 3rem 2rem;
+  padding: 2rem 1.5rem; /* Reduced padding */
   min-height: 50vh;
   display: flex;
   align-items: center;
@@ -13,16 +13,17 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.7rem; /* Increased font size */
   color: #333;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced margin */
 }
 
 .contactInfo {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem; /* Reduced gap */
 }
 
 .infoColumn {
@@ -32,23 +33,23 @@
 
 .mapColumn {
   flex: 1.2;
-  min-width: 350px;
+  min-width: 800px;
 }
 
 .infoGroup {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem; /* Slightly reduced margin */
 }
 
 .infoGroup h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Increased font size */
   color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem; /* Slightly reduced margin */
 }
 
 .infoGroup p {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Increased font size */
   color: #666;
-  margin: 0.25rem 0;
+  margin: 0.2rem 0; /* Slightly reduced margin */
 }
 
 .infoGroup a {
@@ -62,23 +63,22 @@
 }
 
 .mapColumn {
-  height: 300px;
+  height: 380px; /* Increased height */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .socialLinks {
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* Reduced margin */
   text-align: center;
 }
 
 .socialLinks h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Increased font size */
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem; /* Reduced margin */
 }
-
 .socialIcons {
   display: flex;
   justify-content: center;
@@ -88,8 +88,8 @@
 .socialIcons a {
   background-color: #000;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 45px; /* Slightly increased size */
+  height: 45px; /* Slightly increased size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,11 +103,10 @@
 
 @media (max-width: 768px) {
   .contactContainer {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1rem; /* Further reduced padding for mobile */
   }
-
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Adjusted for mobile */
   }
 
   .contactInfo {
@@ -117,11 +116,52 @@
   .infoColumn,
   .mapColumn {
     width: 100%;
+    min-width: unset;
+  }
+
+  .infoColumn {
+    padding: 0 1rem;
   }
 
   .mapColumn {
-    height: 250px;
-    min-width: unset;
+    height: 300px;
+    margin: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .socialIcons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mapColumn > div {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 1.5rem 0.8rem; /* Further reduced padding for smaller devices */
+  }
+
+  .title {
+    font-size: 2rem; /* Adjusted for smaller devices */
+  }
+
+  .infoGroup h2 {
+    font-size: 1.2rem;
+  }
+
+  .infoGroup p,
+  .infoGroup a {
+    font-size: 1rem;
+  }
+
+  .socialLinks h3 {
+    font-size: 1.4rem;
   }
 
   .socialIcons a {
@@ -130,30 +170,9 @@
   }
 }
 
-@media (max-width: 480px) {
-  .contactContainer {
-    padding: 2rem 1rem;
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .infoGroup h2 {
-    font-size: 1.1rem;
-  }
-
-  .infoGroup p,
-  .infoGroup a {
-    font-size: 0.9rem;
-  }
-
-  .socialLinks h3 {
-    font-size: 1.3rem;
-  }
-
-  .socialIcons a {
-    width: 35px;
-    height: 35px;
+@media (min-width: 769px) {
+  .mapColumn {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
