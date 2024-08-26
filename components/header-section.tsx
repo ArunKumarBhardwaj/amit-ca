@@ -4,35 +4,48 @@ import styles from "../css/Navbar.module.css";
 
 export default function HeaderSection() {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
-  const [activeSection, setActiveSection] = useState(""); // Track the active section
+  const [activeSection, setActiveSection] = useState("");
   const navbarAreaEl = useRef<any>(null);
 
-  // Function to check if the navbar should be sticky
   function fixNavBar() {
     if (navbarAreaEl.current) {
       setIsNavbarSticky(window.scrollY > navbarAreaEl.current.offsetTop);
     }
   }
 
-  // Function to highlight the navbar link based on scroll position
   const highlightNavLink = () => {
     const sections = document.querySelectorAll("section");
-    const scrollPosition = window.scrollY + 65; // Adjust for sticky navbar height
+    const scrollPosition = window.scrollY + window.innerHeight / 2; // Use middle of viewport
+
+    let currentSection = "";
 
     sections.forEach((section) => {
-      if (
-        section.offsetTop <= scrollPosition &&
-        section.offsetTop + section.clientHeight > scrollPosition
-      ) {
-        setActiveSection(section.id);
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.clientHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentSection = section.id;
       }
     });
+
+    // Special case for last section (Contact Us)
+    const lastSection = sections[sections.length - 1];
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 100
+    ) {
+      currentSection = lastSection.id;
+    }
+
+    setActiveSection(currentSection);
   };
 
-  // Add scroll event listeners
   useEffect(() => {
     window.addEventListener("scroll", fixNavBar);
     window.addEventListener("scroll", highlightNavLink);
+
+    // Initial highlight
+    highlightNavLink();
 
     return () => {
       window.removeEventListener("scroll", fixNavBar);
@@ -40,12 +53,11 @@ export default function HeaderSection() {
     };
   }, []);
 
-  // Function to scroll to a specific section
-  const scrollToSection = (sectionId: any) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 65, // Adjust offset for sticky navbar
+        top: section.offsetTop - 65,
         behavior: "smooth",
       });
     }
@@ -57,11 +69,11 @@ export default function HeaderSection() {
       className={`${styles.navbar} ${isNavbarSticky ? styles.sticky : ""}`}
     >
       <div className={styles.logo}>
-        <>
-          <Link href="/">Jakhwal Advisors</Link>
+        <Link href="/">
+          <p>Jakhwal Advisors</p>
           <div className={styles.lineBreaker} />
           <p className={styles.charteredText}>CHARTERED ACCOUNTANTS</p>
-        </>
+        </Link>
       </div>
       <ul className={styles.navLinks}>
         <li className={activeSection === "section1" ? styles.active : ""}>
