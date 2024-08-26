@@ -1,0 +1,38 @@
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.companyName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .companyName {
+    margin-bottom: 0.5rem;
+  }
+}

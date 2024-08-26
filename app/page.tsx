@@ -4,6 +4,7 @@ import HeaderSection from "@/components/header-section";
 import BannerSection from "@/components/banner-section";
 import WhoWeAre from "@/components/who-we-are-section";
 import ContactUs from "@/components/contact-us";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -21,9 +22,7 @@ export default function Home() {
         <h1>Testimonial</h1>
       </section>
       <ContactUs />
-      {/* <section id="section5" style={{ height: "100vh" }}>
-        <h1>Contact Section</h1>
-      </section> */}
+      <Footer />
     </>
   );
 }
