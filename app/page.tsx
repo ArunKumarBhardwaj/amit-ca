@@ -5,6 +5,7 @@ import BannerSection from "@/components/banner-section";
 import WhoWeAre from "@/components/who-we-are-section";
 import ContactUs from "@/components/contact-us";
 import Footer from "@/components/footer";
+import Services from "@/components/services-section";
 
 export default function Home() {
   return (
@@ -12,9 +13,7 @@ export default function Home() {
       <HeaderSection />
       <BannerSection />
       <WhoWeAre />
-      <section id="section2" style={{ height: "100vh" }}>
-        <h1>Services</h1>
-      </section>
+      <Services />
       <section id="section3" style={{ height: "100vh" }}>
         <h1>Why Us</h1>
       </section>
