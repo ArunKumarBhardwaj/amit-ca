@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #1f2937;
+  background-color: #ffffff;
   position: fixed;
   width: 100%;
   top: 0;
@@ -13,29 +13,30 @@
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   height: 65px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sticky {
   position: fixed;
   z-index: 1000;
-  background-color: #1f2937;
+  background-color: #ffffff;
   transition: all 0.3s ease-out 0s;
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .lineBreaker {
-  border-bottom: 1px solid rgb(245, 240, 240);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .charteredText {
-  color: #fff;
+  color: #4b5563;
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .logo a {
-  color: #fff;
+  color: #1f2937;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
@@ -48,19 +49,19 @@
 }
 
 .navLinks a {
-  color: #fff;
+  color: #4b5563;
   text-decoration: none;
   font: medium;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .navLinks li.active a {
-  color: #ff6347;
+  color: #60a5fa; /* Changed to match the theme */
 }
 
 .navLinks a:hover {
-  color: #ff6347;
-  transition: color 0.3s;
+  color: #60a5fa; /* Changed to match the theme */
 }
 
 @media (max-width: 768px) {

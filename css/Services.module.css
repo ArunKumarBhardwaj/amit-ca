@@ -17,7 +17,7 @@
     minmax(230px, 1fr)
   ); /* Reduced minimum width */
   gap: 2.5rem; /* Kept increased gap between cards */
-  max-width: 1200px; /* Slightly reduced max-width */
+  max-width: 1300px; /* Slightly reduced max-width */
   margin: 0 auto;
 }
 
