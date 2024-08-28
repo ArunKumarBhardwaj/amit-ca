@@ -13,6 +13,17 @@
 
 .bannerImage {
   filter: blur(4px);
+  transform: scale(1.1);
+  animation: subtleZoom 20s infinite alternate;
+}
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }
 
 .overlay {
@@ -21,10 +32,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
 }
 
-.content {
+.contentContainer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,15 +47,33 @@
   text-align: center;
   color: white;
   z-index: 1;
+  width: 80%;
+  max-width: 800px;
 }
 
-.content h1 {
-  font-size: 3rem;
+.title {
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
 }
 
-.content p {
+.subtitle {
   font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -48,11 +81,11 @@
     height: 450px;
   }
 
-  .content h1 {
+  .title {
     font-size: 2.5rem;
   }
 
-  .content p {
+  .subtitle {
     font-size: 1.2rem;
   }
 }
@@ -62,11 +95,11 @@
     height: 350px;
   }
 
-  .content h1 {
+  .title {
     font-size: 2rem;
   }
 
-  .content p {
+  .subtitle {
     font-size: 1rem;
   }
 }

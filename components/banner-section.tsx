@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import meetings from "../public/images/meeting.jpg";
 import styles from "../css/BannerSection.module.css";
+import meetings from "../public/images/meeting.jpg";
 
-type Props = {};
-
-export default function BannerSection({}: Props) {
+export default function BannerSection() {
   return (
     <section className={styles.bannerSection}>
       <div className={styles.imageContainer}>
@@ -14,15 +12,14 @@ export default function BannerSection({}: Props) {
           alt="Business meeting"
           layout="fill"
           objectFit="cover"
-          quality={100}
-          priority
           className={styles.bannerImage}
+          priority
         />
       </div>
       <div className={styles.overlay}></div>
-      <div className={styles.content}>
-        <h1>Welcome to Jakhwal Advisors</h1>
-        <p>Your trusted partner in financial success</p>
+      <div className={styles.contentContainer}>
+        <h1 className={styles.title}>Welcome to Jakhwal Advisors</h1>
+        <p className={styles.subtitle}>Your Trusted Financial Partners</p>
       </div>
     </section>
   );
