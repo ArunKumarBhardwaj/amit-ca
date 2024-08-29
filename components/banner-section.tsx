@@ -10,8 +10,7 @@ export default function BannerSection() {
         <Image
           src={meetings}
           alt="Business meeting"
-          layout="fill"
-          objectFit="cover"
+          fill={true}
           className={styles.bannerImage}
           priority
         />

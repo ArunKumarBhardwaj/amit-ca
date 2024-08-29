@@ -1,0 +1,132 @@
+.testimonialSection {
+  background-color: #1f2937;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background-color: #374151;
+  border-radius: 8px;
+  padding: 2.5rem;
+  width: 700px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonialContent {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonialAuthor {
+  text-align: right;
+}
+
+.authorName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.authorPosition {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.navButton {
+  background-color: #60a5fa;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #3b82f6;
+}
+
+.prevButton {
+  margin-right: 1rem;
+}
+
+.nextButton {
+  margin-left: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #9ca3af;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .testimonialCard {
+    width: 90%;
+    height: auto;
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .testimonialContent {
+    font-size: 1rem;
+  }
+
+  .authorName {
+    font-size: 1.1rem;
+  }
+
+  .authorPosition {
+    font-size: 0.8rem;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
