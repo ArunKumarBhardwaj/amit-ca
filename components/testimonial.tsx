@@ -7,21 +7,21 @@ const testimonials = [
     name: "John Doe",
     position: "CEO, Tech Corp",
     content:
-      "Jakhwal Advisors provided exceptional service. Their expertise in financial planning has been invaluable to our company growth.",
+      "Jakhwal Advisors provided exceptional service. Their expertise in financial planning has been invaluable to our company's growth.",
   },
   {
     id: 2,
     name: "Jane Smith",
     position: "CFO, StartUp Inc",
     content:
-      "The team at Jakhwal Advisors is professional, knowledgeable, and always available. They have helped us navigate complex financial challenges with ease.",
+      "The team at Jakhwal Advisors is professional, knowledgeable, and always available. They've helped us navigate complex financial challenges with ease.",
   },
   {
     id: 3,
     name: "Mike Johnson",
     position: "Owner, Local Business",
     content:
-      "I am extremely satisfied with the personalized attention and expert advice I have received from Jakhwal Advisors. They truly care about their clients success.",
+      "I'm extremely satisfied with the personalized attention and expert advice I've received from Jakhwal Advisors. They truly care about their clients' success.",
   },
 ];
 
