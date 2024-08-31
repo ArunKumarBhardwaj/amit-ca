@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../css/Testimonial.module.css";
+import styles from "../../css/modules/Testimonials.module.css";
 
 const testimonials = [
   {
@@ -25,7 +25,7 @@ const testimonials = [
   },
 ];
 
-const Testimonial = () => {
+const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -95,4 +95,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Testimonials;

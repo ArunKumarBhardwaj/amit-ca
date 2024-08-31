@@ -1,6 +1,6 @@
 import Image from "next/image";
-import styles from "../css/WhoWeAre.module.css";
-import meetings from "../public/images/meeting.jpg";
+import styles from "../../css/modules/WhoWeAre.module.css";
+import meetings from "../../public/images/meeting.jpg";
 
 const WhoWeAre = () => {
   return (

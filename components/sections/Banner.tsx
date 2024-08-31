@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../css/BannerSection.module.css";
-import meetings from "../public/images/meeting.jpg";
+import styles from "../../css/modules/Banner.module.css";
+import meetings from "../../public/images/meeting.jpg";
 
-export default function BannerSection() {
+export default function Banner() {
   return (
     <section className={styles.bannerSection}>
       <div className={styles.imageContainer}>
