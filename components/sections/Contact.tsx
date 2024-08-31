@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styles from "../css/ContactUs.module.css";
+import styles from "../../css/modules/Contact.module.css";
 import {
   FaLinkedin,
   FaWhatsapp,
@@ -7,12 +7,12 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 
-const Map = dynamic(() => import("../components/map/map"), {
+const Map = dynamic(() => import("../../components/map/map"), {
   loading: () => <p>Loading map...</p>,
   ssr: false,
 });
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <section className={styles.contactContainer} id="section5">
       <div className={styles.contentWrapper}>
@@ -82,4 +82,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

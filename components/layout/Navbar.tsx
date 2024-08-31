@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
-import styles from "../css/Navbar.module.css";
+import styles from "../../css/modules/Navbar.module.css";
 
 const navigationRoutes = [
   "Who We Are",
@@ -10,7 +10,7 @@ const navigationRoutes = [
   "Contact",
 ] as const;
 
-const HeaderSection: React.FC = () => {
+const NavBar: React.FC = () => {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -121,4 +121,4 @@ const HeaderSection: React.FC = () => {
   );
 };
 
-export default HeaderSection;
+export default NavBar;

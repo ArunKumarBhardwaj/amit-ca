@@ -1,19 +1,18 @@
 "use client";
 
-import HeaderSection from "@/components/header-section";
-import BannerSection from "@/components/banner-section";
-import WhoWeAre from "@/components/who-we-are-section";
-import ContactUs from "@/components/contact-us";
-import Footer from "@/components/footer";
-import Services from "@/components/services-section";
-import Testimonial from "@/components/testimonial";
-// import WhyUs from "@/components/why-us";
+import NavBar from "@/components/layout/Navbar";
+import Banner from "@/components/sections/Banner";
+import WhoWeAre from "@/components/sections/WhoWeAre";
+import Services from "@/components/sections/Services";
+import Testimonial from "@/components/sections/Testimonials";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
-      <HeaderSection />
-      <BannerSection />
+      <NavBar />
+      <Banner />
       <WhoWeAre />
       <Services />
       {/* <WhyUs /> */}
@@ -21,7 +20,7 @@ export default function Home() {
         <h1>Why Us</h1>
       </section>
       <Testimonial />
-      <ContactUs />
+      <Contact />
       <Footer />
     </>
   );
