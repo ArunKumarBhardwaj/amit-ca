@@ -84,7 +84,10 @@ const HeaderSection: React.FC = () => {
           <p className={styles.charteredText}>Consultancy Firm</p>
         </Link>
       </div>
-      <div className={styles.hamburger} onClick={toggleMobileMenu}>
+      <div
+        className={`${styles.hamburger} ${isMobileMenuOpen ? styles.open : ""}`}
+        onClick={toggleMobileMenu}
+      >
         <span></span>
         <span></span>
         <span></span>
