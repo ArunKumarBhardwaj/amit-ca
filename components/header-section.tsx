@@ -13,6 +13,7 @@ const navigationRoutes = [
 const HeaderSection: React.FC = () => {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navbarAreaEl = useRef<HTMLDivElement>(null);
 
   const updateNavbar = useCallback(() => {
@@ -34,7 +35,6 @@ const HeaderSection: React.FC = () => {
       }
     });
 
-    // Special case for last section (Contact Us)
     if (
       window.innerHeight + window.scrollY >=
       document.body.offsetHeight - 100
@@ -49,7 +49,7 @@ const HeaderSection: React.FC = () => {
     window.addEventListener("scroll", updateNavbar);
     window.addEventListener("resize", updateNavbar);
 
-    updateNavbar(); // Initial update
+    updateNavbar();
 
     return () => {
       window.removeEventListener("scroll", updateNavbar);
@@ -64,8 +64,13 @@ const HeaderSection: React.FC = () => {
         top: section.offsetTop - 65,
         behavior: "smooth",
       });
+      setIsMobileMenuOpen(false);
     }
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <nav
@@ -79,7 +84,16 @@ const HeaderSection: React.FC = () => {
           <p className={styles.charteredText}>Consultancy Firm</p>
         </Link>
       </div>
-      <ul className={styles.navLinks}>
+      <div className={styles.hamburger} onClick={toggleMobileMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul
+        className={`${styles.navLinks} ${
+          isMobileMenuOpen ? styles.showMobileMenu : ""
+        }`}
+      >
         {navigationRoutes.map((item, index) => (
           <li
             key={item}
