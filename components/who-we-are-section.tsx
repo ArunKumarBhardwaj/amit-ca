@@ -11,31 +11,32 @@ const WhoWeAre = () => {
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <p className={styles.subtitle}>
-            <b>JAKHWAL ADVISORS</b>, a Chartered Accountancy firm was formed in
-            the year 2022.
+            <strong>JAKHWAL ADVISORS</strong>, a leading financial consultancy
+            firm specializing in Virtual CFO Services, was established in 2022.
           </p>
           <p className={styles.paragraph}>
-            We have assisted clients in establishing new business ventures, and
-            guided them on various initial compliances and entity formation
-            procedures. At <strong> JAKHWAL ADVISORS</strong>, clients are
-            provided with excellent services with a complete dedication and
-            transparent approach.
+            We have empowered numerous businesses by providing strategic
+            financial leadership and guidance. Our expertise lies in helping
+            companies optimize their financial operations without the overhead
+            of a full-time CFO. At <strong>JAKHWAL ADVISORS</strong>, we pride
+            ourselves on delivering exceptional Virtual CFO services with
+            unwavering dedication and a transparent approach.
           </p>
           <p className={styles.paragraph}>
-            Major areas of services include{" "}
+            Our core services include{" "}
             <strong>
-              start-up advisory, devising strategy for business restructuring,
-              regulatory approvals, periodic compliance under income tax law,
-              GST law, company law, EPF & ESIC law, drafting and registration of
-              agreements with various statutory authorities, due diligence and
-              representation before authorities.
+              financial strategy development, cash flow management, budgeting
+              and forecasting, financial risk assessment, performance analysis,
+              capital raising support, and strategic decision-making guidance.
+              We also assist in regulatory compliance, financial reporting, and
+              implementing robust financial systems and processes.
             </strong>
           </p>
         </div>
         <div className={styles.imageContainer}>
           <Image
             src={meetings}
-            alt="Profile of the CA"
+            alt="JAKHWAL ADVISORS team in action"
             width={400}
             height={360}
             className={styles.image}

@@ -66,6 +66,16 @@
   animation-delay: 0.5s;
 }
 
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  color: #f0f0f0;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1s;
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -89,6 +99,10 @@
   .subtitle {
     font-size: 1.2rem;
   }
+
+  .tagline {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -102,5 +116,9 @@
 
   .subtitle {
     font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
   }
 }

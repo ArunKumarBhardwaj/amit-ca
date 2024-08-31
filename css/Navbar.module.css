@@ -25,19 +25,19 @@
 }
 
 .lineBreaker {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
 }
 
-.charteredText {
-  color: #4b5563;
-  font-size: 12px;
+.companyName {
+  color: #1f2937;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
 }
 
-.logo a {
+.charteredText {
   color: #1f2937;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -78,11 +78,11 @@
     text-align: left;
   }
 
-  .logo a {
-    font-size: 18px;
+  .companyName {
+    font-size: 16px;
   }
 
   .charteredText {
-    font-size: 10px;
+    font-size: 12px;
   }
 }

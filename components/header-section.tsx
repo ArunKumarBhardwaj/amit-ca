@@ -74,9 +74,9 @@ const HeaderSection: React.FC = () => {
     >
       <div className={styles.logo}>
         <Link href="/">
-          <p>Jakhwal Advisors</p>
+          <p className={styles.companyName}>Jakhwal Advisors LLP</p>
           <div className={styles.lineBreaker} />
-          <p className={styles.charteredText}>CHARTERED ACCOUNTANTS</p>
+          <p className={styles.charteredText}>Consultancy Firm</p>
         </Link>
       </div>
       <ul className={styles.navLinks}>

@@ -9,7 +9,7 @@ export default function BannerSection() {
       <div className={styles.imageContainer}>
         <Image
           src={meetings}
-          alt="Business meeting"
+          alt="Strategic financial planning session"
           fill={true}
           className={styles.bannerImage}
           priority
@@ -17,8 +17,13 @@ export default function BannerSection() {
       </div>
       <div className={styles.overlay}></div>
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Welcome to Jakhwal Advisors</h1>
-        <p className={styles.subtitle}>Your Trusted Financial Partners</p>
+        <h1 className={styles.title}>Elevate Your Financial Strategy</h1>
+        <p className={styles.subtitle}>
+          Virtual CFO Services by Jakhwal Advisors LLP
+        </p>
+        <p className={styles.tagline}>
+          Expert Financial Leadership for Your Business Growth
+        </p>
       </div>
     </section>
   );

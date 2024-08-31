@@ -3,16 +3,16 @@ import styles from "../css/Services.module.css";
 
 const servicesList = [
   {
-    title: "Audit & Assurance",
+    title: "Virtual CFO Services",
     description:
-      "Comprehensive auditing services to ensure financial accuracy and compliance with regulations.",
-    icon: "📊",
+      "Comprehensive financial management and strategic guidance to drive your business growth without the cost of a full-time CFO.",
+    icon: "💼",
   },
   {
     title: "Tax Planning & Compliance",
     description:
       "Strategic tax planning and timely compliance with tax laws to optimize your financial position.",
-    icon: "💼",
+    icon: "📊",
   },
   {
     title: "Accounting & Bookkeeping",

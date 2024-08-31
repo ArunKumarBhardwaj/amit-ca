@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.companyName}>
-            <span>Jakhwal Advisors</span>
+            <span>Jakhwal Advisors LLP</span>
           </div>
           <div className={styles.copyright}>
             All rights reserved © {new Date().getFullYear()}
