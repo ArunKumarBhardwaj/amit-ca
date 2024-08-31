@@ -1,21 +1,27 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import styles from "../css/Navbar.module.css";
 
-export default function HeaderSection() {
-  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const navbarAreaEl = useRef<any>(null);
+const navigationRoutes = [
+  "Who We Are",
+  "Services",
+  "Why Us",
+  "Testimonials",
+  "Contact",
+] as const;
 
-  function fixNavBar() {
+const HeaderSection: React.FC = () => {
+  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
+  const navbarAreaEl = useRef<HTMLDivElement>(null);
+
+  const updateNavbar = useCallback(() => {
     if (navbarAreaEl.current) {
       setIsNavbarSticky(window.scrollY > navbarAreaEl.current.offsetTop);
     }
-  }
 
-  const highlightNavLink = () => {
     const sections = document.querySelectorAll("section");
-    const scrollPosition = window.scrollY + window.innerHeight / 2; // Use middle of viewport
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     let currentSection = "";
 
@@ -29,31 +35,29 @@ export default function HeaderSection() {
     });
 
     // Special case for last section (Contact Us)
-    const lastSection = sections[sections.length - 1];
     if (
       window.innerHeight + window.scrollY >=
       document.body.offsetHeight - 100
     ) {
-      currentSection = lastSection.id;
+      currentSection = sections[sections.length - 1].id;
     }
 
     setActiveSection(currentSection);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", fixNavBar);
-    window.addEventListener("scroll", highlightNavLink);
-
-    // Initial highlight
-    highlightNavLink();
-
-    return () => {
-      window.removeEventListener("scroll", fixNavBar);
-      window.removeEventListener("scroll", highlightNavLink);
-    };
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  useEffect(() => {
+    window.addEventListener("scroll", updateNavbar);
+    window.addEventListener("resize", updateNavbar);
+
+    updateNavbar(); // Initial update
+
+    return () => {
+      window.removeEventListener("scroll", updateNavbar);
+      window.removeEventListener("resize", updateNavbar);
+    };
+  }, [updateNavbar]);
+
+  const scrollToSection = useCallback((sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
@@ -61,10 +65,10 @@ export default function HeaderSection() {
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   return (
-    <div
+    <nav
       ref={navbarAreaEl}
       className={`${styles.navbar} ${isNavbarSticky ? styles.sticky : ""}`}
     >
@@ -76,22 +80,28 @@ export default function HeaderSection() {
         </Link>
       </div>
       <ul className={styles.navLinks}>
-        <li className={activeSection === "section1" ? styles.active : ""}>
-          <a onClick={() => scrollToSection("section1")}>Who We Are</a>
-        </li>
-        <li className={activeSection === "section2" ? styles.active : ""}>
-          <a onClick={() => scrollToSection("section2")}>Services</a>
-        </li>
-        <li className={activeSection === "section3" ? styles.active : ""}>
-          <a onClick={() => scrollToSection("section3")}>Why Us</a>
-        </li>
-        <li className={activeSection === "section4" ? styles.active : ""}>
-          <a onClick={() => scrollToSection("section4")}>Testimonials</a>
-        </li>
-        <li className={activeSection === "section5" ? styles.active : ""}>
-          <a onClick={() => scrollToSection("section5")}>Contact</a>
-        </li>
+        {navigationRoutes.map((item, index) => (
+          <li
+            key={item}
+            className={
+              activeSection === `section${index + 1}` ? styles.active : ""
+            }
+          >
+            <Link
+              href={`/#section${index + 1}`}
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(`section${index + 1}`);
+              }}
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
       </ul>
-    </div>
+    </nav>
   );
-}
+};
+
+export default HeaderSection;
