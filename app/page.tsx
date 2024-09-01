@@ -7,6 +7,7 @@ import Services from "@/components/sections/Services";
 import Testimonial from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
+import WhyUs from "@/components/sections/WhyUs";
 
 export default function Home() {
   return (
@@ -15,10 +16,7 @@ export default function Home() {
       <Banner />
       <WhoWeAre />
       <Services />
-      {/* <WhyUs /> */}
-      <section id="section3" style={{ height: "100vh" }}>
-        <h1>Why Us</h1>
-      </section>
+      <WhyUs />
       <Testimonial />
       <Contact />
       <Footer />
