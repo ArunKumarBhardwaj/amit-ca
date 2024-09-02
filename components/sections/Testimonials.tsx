@@ -1,7 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import styles from "../../css/modules/Testimonials.module.css";
 
-const testimonials = [
+interface Testimonial {
+  id: number;
+  name: string;
+  position: string;
+  content: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "John Doe",
@@ -25,70 +33,76 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Testimonials: React.FC = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      emblaApi && emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <section className={styles.testimonialSection} id="section4">
       <h2 className={styles.sectionTitle}>What Our Clients Say</h2>
-      <div className={styles.sliderContainer}>
-        <button
-          className={`${styles.navButton} ${styles.prevButton}`}
-          onClick={handlePrev}
-        >
-          &lt;
-        </button>
-        <div className={styles.testimonialCard}>
-          <p className={styles.testimonialContent}>
-            "{testimonials[currentIndex].content}"
-          </p>
-          <div className={styles.testimonialAuthor}>
-            <p className={styles.authorName}>
-              {testimonials[currentIndex].name}
-            </p>
-            <p className={styles.authorPosition}>
-              {testimonials[currentIndex].position}
-            </p>
+      <div className={styles.embla}>
+        <div className={styles.embla__viewport} ref={emblaRef}>
+          <div className={styles.embla__container}>
+            {testimonials.map((testimonial: Testimonial) => (
+              <div className={styles.embla__slide} key={testimonial.id}>
+                <div className={styles.testimonialCard}>
+                  <p className={styles.testimonialContent}>
+                    "{testimonial.content}"
+                  </p>
+                  <div className={styles.testimonialAuthor}>
+                    <p className={styles.authorName}>{testimonial.name}</p>
+                    <p className={styles.authorPosition}>
+                      {testimonial.position}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <button
-          className={`${styles.navButton} ${styles.nextButton}`}
-          onClick={handleNext}
+          className={`${styles.embla__button} ${styles["embla__button--prev"]}`}
+          onClick={() => emblaApi && emblaApi.scrollPrev()}
+        >
+          &lt;
+        </button>
+        <button
+          className={`${styles.embla__button} ${styles["embla__button--next"]}`}
+          onClick={() => emblaApi && emblaApi.scrollNext()}
         >
           &gt;
         </button>
       </div>
-      <div className={styles.dots}>
+      <div className={styles.embla__dots}>
         {testimonials.map((_, index) => (
-          <span
+          <button
             key={index}
-            className={`${styles.dot} ${
-              index === currentIndex ? styles.activeDot : ""
+            className={`${styles.embla__dot} ${
+              index === selectedIndex ? styles["embla__dot--selected"] : ""
             }`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
+            onClick={() => scrollTo(index)}
+          />
         ))}
       </div>
     </section>
