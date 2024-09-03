@@ -123,20 +123,25 @@
 }
 
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .testimonialSection {
+    padding: 2rem 1rem 1rem; /* Adjusted padding for mobile */
   }
 
   .embla {
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    margin-bottom: 1rem; /* Add space below the carousel */
   }
 
   .testimonialCard {
-    width: 80%;
-    height: 200px; /* Fixed height for mobile */
+    width: 85%;
     padding: 1.5rem;
     margin: 0 auto;
+    min-height: 180px; /* Slightly reduced minimum height */
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   .testimonialContent {
@@ -164,14 +169,15 @@
   }
 
   .embla__button--prev {
-    left: 0;
+    left: -10px;
   }
 
   .embla__button--next {
-    right: 0;
+    right: -10px;
   }
 
   .embla__dots {
+    margin-bottom: 1rem; /* Increased bottom margin for mobile */
     margin-top: 1.5rem; /* Increased top margin for mobile */
     padding-top: 0.5rem; /* Added top padding for mobile */
   }
