@@ -70,6 +70,7 @@ const NavBar: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflow = isMobileMenuOpen ? "auto" : "hidden";
   };
 
   return (
@@ -92,31 +93,33 @@ const NavBar: React.FC = () => {
         <span></span>
         <span></span>
       </div>
-      <ul
-        className={`${styles.navLinks} ${
-          isMobileMenuOpen ? styles.showMobileMenu : ""
+      <div
+        className={`${styles.mobileMenuOverlay} ${
+          isMobileMenuOpen ? styles.open : ""
         }`}
       >
-        {navigationRoutes.map((item, index) => (
-          <li
-            key={item}
-            className={
-              activeSection === `section${index + 1}` ? styles.active : ""
-            }
-          >
-            <Link
-              href={`/#section${index + 1}`}
-              scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(`section${index + 1}`);
-              }}
+        <ul className={styles.navLinks}>
+          {navigationRoutes.map((item, index) => (
+            <li
+              key={item}
+              className={
+                activeSection === `section${index + 1}` ? styles.active : ""
+              }
             >
-              {item}
-            </Link>
-          </li>
-        ))}
-      </ul>
+              <Link
+                href={`/#section${index + 1}`}
+                scroll={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(`section${index + 1}`);
+                }}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
