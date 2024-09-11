@@ -11,15 +11,16 @@ const WhoWeAre = () => {
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <p className={styles.subtitle}>
-            <strong>JAKHWAL ADVISORS</strong>, a leading financial consultancy
-            firm specializing in Virtual CFO Services, was established in 2022.
+            <strong>Asterism Advisory LLP</strong>, a leading financial
+            consultancy firm specializing in Virtual CFO Services, was
+            established in 2024.
           </p>
           <p className={styles.paragraph}>
             We have empowered numerous businesses by providing strategic
             financial leadership and guidance. Our expertise lies in helping
             companies optimize their financial operations without the overhead
-            of a full-time CFO. At <strong>JAKHWAL ADVISORS</strong>, we pride
-            ourselves on delivering exceptional Virtual CFO services with
+            of a full-time CFO. At <strong>Asterism Advisory LLP</strong>, we
+            pride ourselves on delivering exceptional Virtual CFO services with
             unwavering dedication and a transparent approach.
           </p>
           <p className={styles.paragraph}>
@@ -36,7 +37,7 @@ const WhoWeAre = () => {
         <div className={styles.imageContainer}>
           <Image
             src={meetings}
-            alt="JAKHWAL ADVISORS team in action"
+            alt="Asterism Advisory LLP team in action"
             width={400}
             height={360}
             className={styles.image}

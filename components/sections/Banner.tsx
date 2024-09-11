@@ -19,7 +19,7 @@ export default function Banner() {
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>Elevate Your Financial Strategy</h1>
         <p className={styles.subtitle}>
-          Virtual CFO Services by Jakhwal Advisors LLP
+          Virtual CFO Services by Asterism Advisory LLP
         </p>
         <p className={styles.tagline}>
           Expert Financial Leadership for Your Business Growth

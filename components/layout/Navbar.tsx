@@ -80,7 +80,7 @@ const NavBar: React.FC = () => {
     >
       <div className={styles.logo}>
         <Link href="/">
-          <p className={styles.companyName}>Jakhwal Advisors LLP</p>
+          <p className={styles.companyName}>Asterism Advisory LLP</p>
           <div className={styles.lineBreaker} />
           <p className={styles.charteredText}>Consultancy Firm</p>
         </Link>
