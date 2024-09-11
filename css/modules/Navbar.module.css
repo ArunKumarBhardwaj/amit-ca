@@ -28,7 +28,7 @@
 
 .companyName {
   color: #1f2937;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -136,7 +136,7 @@
   }
 
   .companyName {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .charteredText {
