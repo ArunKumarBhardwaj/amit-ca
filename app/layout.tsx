@@ -7,7 +7,7 @@ import "../css/globals.css";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "Jakhwal Advisors",
+  title: "Asterism Advisory LLP",
   description: "",
   icons: {
     icon: "/icon.png",
