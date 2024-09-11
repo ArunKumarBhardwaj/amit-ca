@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className={poppins.className}>
+      <body className={`${poppins.className}`}>
         {children}
         <SpeedInsights />
         <Analytics />
