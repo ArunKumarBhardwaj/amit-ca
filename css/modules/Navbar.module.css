@@ -27,7 +27,7 @@
 }
 
 .companyName {
-  color: #082567;
+  color: #1c39bb;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -55,11 +55,11 @@
 }
 
 .navLinks li.active a {
-  color: #082567;
+  color: #1c39bb;
 }
 
 .navLinks a:hover {
-  color: #082567;
+  color: #1c39bb;
 }
 
 .hamburger {
